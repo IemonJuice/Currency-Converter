@@ -1,0 +1,37 @@
+<main
+  class="font-sans font-bold overflow-hidden w-full h-full bg-gradient-to-t from-red-600 to-blue-950 pt-28 text-white ">
+
+  <div
+    class=" rounded-3xl shadow shadow-lg drop-shadow-xl w-full mx-auto md:w-2/3 bg-white bg-opacity-20 h-2/3 hover:filter-none hover:bg-opacity-0 hover:scale-105 duration-300"
+    action="">
+    <div class="flex flex-col  justify-center items-center w-full h-full hover:gap-2 duration-300 sm:flex-row">
+      <div class="flex justify-center items-center w-full sm:w-1/2 bg-gradient-to-r from-blue-950 to-red-600 h-full">
+        <input (input)="changeCurrency2()" [(ngModel)]="currencyValue1" placeholder="Enter a number"
+               class="focus:bg-slate-700 duration-300 pl-10 bg-slate-800 h-16 w-2/3 outline-0 shadow shadow-3xl shadow-red-600"
+               type="number">
+        <select #someth1 (change)="getCurrencyFromData(someth1.value)"
+                class=" focus:bg-slate-700 duration-300 text-center bg-slate-800 h-16 outline-0 w-1/6 shadow shadow-3xl shadow-red-600">
+          <option value="none">Currency</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="UAH">UAH</option>
+          <option value="PLN">PLN</option>
+        </select>
+      </div>
+      <div
+        class="flex justify-center items-center w-full sm:w-1/2 bg-gradient-to-l sm:bg-gradient-to-r from-red-600 to-blue-950 h-full">
+        <select #someth2 (change)="getCurrencyToData(someth2.value)"
+                class="text-center  bg-slate-800 h-16 w-1/6 outline-0 shadow shadow-3xl shadow-red-600 focus:bg-slate-700 duration-300">
+          <option>Currency</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="UAH">UAH</option>
+          <option value="PLN">PLN</option>
+        </select>
+        <input (input)="changeCurrency1()" [(ngModel)]="currencyValue2" placeholder="Enter a number"
+               class="focus:bg-slate-700 duration-300 pl-10 bg-slate-800 h-16 w-2/3 outline-0 shadow shadow-3xl shadow-red-600"
+               type="number">
+      </div>
+    </div>
+  </div>
+</main>
