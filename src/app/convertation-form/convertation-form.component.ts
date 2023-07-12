@@ -8,7 +8,7 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./convertation-form.component.css']
 })
 export class ConvertationFormComponent {
-  serverResponse: any;
+  serverResponse?: {conversion_rates?:any} ;
   toCurrencyName: string = '';
   fromCurrencyName: string = '';
   currencyValue1: number = 1;
@@ -22,7 +22,7 @@ export class ConvertationFormComponent {
     try {
       if (this.toCurrencyName === 'Currency' || this.fromCurrencyName === "Currency") {
         alert("Choose all currencies")
-      } else {
+      } else if(this.serverResponse !== undefined){
         this.currencyValue2 = this.currencyValue1 * this.serverResponse.conversion_rates[this.toCurrencyName];
       }
     } catch {
@@ -34,7 +34,7 @@ export class ConvertationFormComponent {
     try {
       if (this.toCurrencyName === 'Currency' || this.fromCurrencyName === "Currency") {
         alert('Choose all currencies!')
-      } else {
+      } else if(this.serverResponse !== undefined) {
         this.currencyValue1 = this.currencyValue2 / this.serverResponse.conversion_rates[this.toCurrencyName];
       }
     } catch {

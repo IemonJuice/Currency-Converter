@@ -9,7 +9,7 @@
         <input (input)="changeCurrency2()" [(ngModel)]="currencyValue1" placeholder="Enter a number"
                class="focus:bg-slate-700 duration-300 pl-10 bg-slate-800 h-16 w-2/3 outline-0 shadow shadow-3xl shadow-red-600"
                type="number">
-        <select #someth1 (change)="getCurrencyFromData(someth1.value)"
+        <select #selectedData1 (change)="getCurrencyFromData(selectedData1.value)"
                 class=" focus:bg-slate-700 duration-300 text-center bg-slate-800 h-16 outline-0 w-1/6 shadow shadow-3xl shadow-red-600">
           <option value="none">Currency</option>
           <option value="USD">USD</option>
@@ -20,7 +20,7 @@
       </div>
       <div
         class="flex justify-center items-center w-full sm:w-1/2 bg-gradient-to-l sm:bg-gradient-to-r from-red-600 to-blue-950 h-full">
-        <select #someth2 (change)="getCurrencyToData(someth2.value)"
+        <select #selectedData2 (change)="getCurrencyToData(selectedData2.value)"
                 class="text-center  bg-slate-800 h-16 w-1/6 outline-0 shadow shadow-3xl shadow-red-600 focus:bg-slate-700 duration-300">
           <option>Currency</option>
           <option value="USD">USD</option>
