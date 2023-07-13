@@ -11,8 +11,8 @@ export class ConvertationFormComponent {
   serverResponse?: {conversion_rates?:any} ;
   toCurrencyName: string = '';
   fromCurrencyName: string = '';
-  currencyValue1: number = 1;
-  currencyValue2: number = this.currencyValue1 / 10;
+  currencyValue1: number = 0;
+  currencyValue2: number = 0;
 
   constructor(private httpClient: HttpClient) {
 
